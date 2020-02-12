@@ -15,7 +15,7 @@ class CountryListGetApi extends Component {
     };
   }
 
-  //On the change event for the select box pass the selected value
+  //on the change event for the select box pass the selected value
   onDropdownSelected = e => {
     //Get the target.value pass it to continent
     this.setState({
@@ -45,7 +45,7 @@ class CountryListGetApi extends Component {
         });
       })
       .catch(error => {
-        //Catch Block: Error handling
+        //catch Block: Error handling
         this.setState({
           loading: false,
           errorMsg: "issue with fetching data"
@@ -67,13 +67,13 @@ class CountryListGetApi extends Component {
 
     return (
       <div>
-        {/*Spinner block : Loading Message*/}
+        {/*spinner block : Loading Message*/}
         {loading ? <div>Loading......</div> : null}
         {/*content block : with result data*/}
         {results.length ? (
           <ul>
             <div>
-              {/*Drop down block */}
+              {/*continent name drop down block */}
               <select onChange={this.onDropdownSelected} value={value}>
                 <option value="">Showing all countries...</option>
                 {countryList.map(continentName => {
@@ -109,6 +109,7 @@ class CountryListGetApi extends Component {
             })}
           </ul>
         ) : null}
+         {/*error display block */}
         {errorMsg ? <div>{errorMsg}</div> : null}
       </div>
     );
