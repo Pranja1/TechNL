@@ -32,9 +32,9 @@ class CountryListGetApi extends Component {
         //store the response object in results and perform sortby inbuilt method from loadash on same
         const results = sortBy(response.data, "name");
         //get all continent from results
-        let allContinents = sortBy(results.map(country => country.continent));
+        const allContinents = sortBy(results.map(country => country.continent));
         //store the unique continent in uniqueContinentsList
-        let uniqueContinentsList = allContinents.filter(
+        const uniqueContinentsList = allContinents.filter(
           (country, index) => allContinents.indexOf(country) === index
         );
         // update the state
