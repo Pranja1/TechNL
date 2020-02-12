@@ -94,13 +94,13 @@ class CountryListGetApi extends Component {
                 if (i.population > 60000000) {
                   return (
                     <li style={{ color: "blue" }}>
-                      {i.name} â€“ {i.population} â€“ {i.continent}
+                      {i.name} - {i.population} - {i.continent}
                     </li>
                   );
                 } else {
                   return (
                     <li style={{ color: "black" }}>
-                      {i.name} â€“ {i.population} â€“ {i.continent}
+                      {i.name} - {i.population} - {i.continent}
                     </li>
                   );
                 }
