@@ -61,7 +61,8 @@ class CountryListGetApi extends Component {
       countryList,
       selected,
       continent,
-      value
+      value,
+      errorMsg
     } = this.state;
 
     return (
@@ -108,6 +109,7 @@ class CountryListGetApi extends Component {
             })}
           </ul>
         ) : null}
+        {errorMsg ? <div>{errorMsg}</div> : null}
       </div>
     );
   }
